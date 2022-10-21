@@ -223,4 +223,5 @@ __all__ = [
     "DeformAttnRoIPool",
     "GpsaRoIPool",
     "MHARoIPool",
+    "Gpsa2RoIPool",
 ]
