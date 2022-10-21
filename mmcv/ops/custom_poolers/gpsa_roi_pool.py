@@ -1,4 +1,3 @@
-from math import prod
 from typing import List, Tuple, Union
 
 from einops import rearrange
@@ -7,7 +6,7 @@ import torch.nn.functional as F
 from torch import nn
 from torchvision import ops
 
-from mha_roi_pool import _ensure_tensor_rois, get_encoding_2d
+from mha_roi_pool import _ensure_tensor_rois, get_encoding_2d, prod
 
 
 __all__ = ["GpsaRoIPool"]

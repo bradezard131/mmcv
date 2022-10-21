@@ -1,4 +1,3 @@
-from math import prod
 from typing import List, Tuple, Union
 
 import torch
@@ -6,7 +5,24 @@ from torch import nn
 from torchvision import ops
 
 
-__all__ = ["MHARoIPool", "_ensure_tensor_rois", "get_encoding_1d", "get_encoding_2d"]
+try:
+    from math import prod
+except ImportError:
+
+    def prod(seq):
+        acc = seq[0]
+        for s in seq[1:]:
+            acc *= s
+        return acc
+
+
+__all__ = [
+    "MHARoIPool",
+    "_ensure_tensor_rois",
+    "get_encoding_1d",
+    "get_encoding_2d",
+    "prod",
+]
 
 
 @torch.jit.script

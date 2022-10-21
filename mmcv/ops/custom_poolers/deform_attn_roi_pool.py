@@ -1,4 +1,3 @@
-from math import prod
 from typing import List, Tuple, Union
 
 from einops import rearrange
@@ -6,7 +5,7 @@ from mmcv.ops import DeformRoIPool
 import torch
 from torch import nn
 
-from mha_roi_pool import _ensure_tensor_rois
+from mha_roi_pool import _ensure_tensor_rois, prod
 
 
 __all__ = ["DeformAttnRoIPool"]
